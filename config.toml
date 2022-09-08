@@ -2,3 +2,6 @@ baseURL = 'http://yashuap.github.io/nyu-notes'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'hugo-book'
+
+[params]
+	BookSection = '*'
