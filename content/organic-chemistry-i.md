@@ -1,17 +1,18 @@
 ---
 title: "Organic Chemistry I"
-date: 2022-09-08T10:57:12-04:00
+date: 2022-09-14T15:51:07-04:00
 katex: true
+mol: true
 ---
 
 # Organic Chemistry I
-
 ## Resources
+
 [Syllabus](/organic-chemistry/i-syllabus.pdf)  
 [Textbook](/organic-chemistry/textbook.pdf)  
 [Study Guide/Solution Manual](/organic-chemistry/solution-manual.pdf)  
 
-## Class Info
+## Course Information
 ### Grading
 | Graded Item                        | % of Final Grade |
 | ---                                | ---              |
@@ -20,53 +21,95 @@ katex: true
 | Final Exam                         | 25%              |
 | Laboratory Grade                   | 25%              |
 
-### Homeworks and Quizzes
-There is homework for the class in the form of practice problems, however **they are not graded**. As for quizzes, we *may* get one during recitation covering the week's content, and those will be graded (10%).
+{{<hint info>}}Homework is not graded.{{</hint>}}
+{{<hint warning>}}Quizzes are not given every week, but rather on random weeks (dependant on the TA).{{</hint>}}
 
-### Misc
-The professor advised us to get a molecular modeling kit. The one we had to get for General Chemistry should suffice.
+## Electrons
+### Quantum Numbers
 
-## Atoms and Atomic Structure
+Each electron in an atom is fundamentally unique. But in order for them to be 'unique,' they need to have some sort of identity to discern them from other electrons. For electrons, this 'ID' is their quantum numbers.
 
-An atom, as you probably know, is composed of a nucleus (which is made of protons and neutrons) and electrons. Atoms have an equal number of protons and electrons, while ions have an unbalanced amount, hence their charge. 
+{{<details "What principle asserts that electrons are unique in an atom?">}}
+**Pauli Exclusion Principle.**
+{{</details>}}
 
-### Where are electrons?
+{{<details "Make a chart that states the four quantum numbers, what they physically represent, and their range of possible values.">}}
+| Quantum Number      | Physical Representation | Possible Values              |
+| ---                 | ---                     | ---                          |
+| Principle ($n$)     | energy shell            | $1 \rightarrow \infty$       |
+| Azimuthal ($\ell$)  | shape/orbital           | $0 (s), 1 (p), 2 (d), ... n$ |
+| Magnetic ($m_\ell$) | orientation             | $-\ell, ... 0, ... \ell$     |
+| Spin ($m_s$)        | spin                    | $-\frac{1}{2}, \frac{1}{2}$  |
 
-What are electrons? Naive models often represent them as balls orbiting a central nucleus, however that is not really accurate to reality. Instead, electrons occupy **electron density clouds** that model the *probability* of an electron occupying a given location. 
+{{<hint info>}}$\ell$ represents the type of orbital ($s, p, d, f$).{{</hint>}}
+{{</details>}}
 
-{{<hint danger>}}	Electrons (and many subatomic 'particles') are not just particles, nor are they just waves. Rather, they exhibit properties of both particles *and* waves.{{</hint>}}
+### Orbitals
 
-The thing about probability is that, at least in this context, it's not discrete; rather it's a continuous property. What this means is that these clouds are quite 'blurry.' If we're talking about a simple ball-shaped density cloud (such as the $1s$ orbital), that means that the closer we are to the nucleus, the more likely we'll 'find' an electron there, and the probability distribution will be denser there. The further away we go, the probability of finding an electron decreases. 
+The traditional ball model of the atom depicts electrons as particles in space, contained in a discrete sphere. In reality, however, electrons exhibit wave-like behaviours, meaning that they are *continuous* entities that take up space. There is no hard line that divides electrons and not-electrons. These volumes of space are called 'orbitals.'
 
-Note, however, that the probability for a $1s$ orbital *approaches* 0 the further out we go; It never is 0. Even if we are 100,000 miles away from the nucleus of an atom, there is *technically* still a chance that we'll find an electron from that atom there.
+{{<hint danger>}}That's not to say there all areas of space has a chance to have an electron, since there can be areas of space with the probability equal to 0. See [nodes](#nodes).{{</hint>}}
 
-That's not to say that there aren't regions of space with 0 electron dinsity. Only the $1s$ orbital has such omnipresent distribution. Orbitals with a higher energy shell (we'll get to what that means later) have regions of space, called **nodes**, with 0 probability of finding an electron there. The figure below shows the electron density clouds of $1s$, $2s$, and $3s$ orbitals, along with their nodes.
+{{<details "Being continuous, the probability distribution is not uniform. What is being varied in these orbitals?">}}
+**Electron density.**
 
-{{<figure src="https://upload.wikimedia.org/wikipedia/commons/5/5c/S_orbitals.png">}}
+These orbitals/electron density clouds model the probability of an electron occupying a point of space, and their infinitesimal small areas in space come together and form a continuous distribution of volume. 
 
-$2s$ orbitals have one node, and $3s$ orbitals have 2 nodes. How many nodes does a $4s$ orbital have? How about a $2p$ orbital? Well, if you noticed the pattern emerging from the figure, you'd know the answer is 3 and 1 respectively. The number of nodes is one less than the principle quantum number ($n$).
+{{<figure src="https://tracingcurves.files.wordpress.com/2019/07/46a9d-bohrvs.electroncloud.jpg" caption="https://tracingcurves.files.wordpress.com/2019/07/46a9d-bohrvs.electroncloud.jpg">}}
+{{</details>}}
 
-{{<hint info>}}
-$$
-	\text{\\# of nodes} = n - 1
-$$
+{{<details "How many electrons can reside in an orbital? Does it depend on $\ell$?">}}
+Two.
+
+Remember, $\ell$ only represents the *type* of orbital. Yes, we write the maximum number of electrons in an $s$ orbital as $s^2$, and we write the maximum number of electrons in a $p$ orbital as $p^6$, but *only when we write the electron configuration*. Really, this is just a shorthand, because a $p$ 'orbital' is actually three orbitals in disguise, each with their own orientations (those orbitals being $p_x, p_y,$ and $p_z$). Each of these $p_n$ orbitals can hold two electrons.
+
+{{<hint info>}}For a quick formula to get the maximum number of electrons in a *type* of orbital, you can use the equation $2+4\ell$.{{</hint>}}
+
+{{<details "Why can orbitals only have two electrons?">}}
+Because of the Pauli Exclusion Principle.
+
+Remember, the PEP states that no two electrons can have the same four quantum numbers. Electrons reside in the same orbital if their $n, \ell,$ and $m_\ell$ are the same as each other. That leaves only the fourth quantum number, $m_s$, which only has two possible values ($-\frac{1}{2}, \frac{1}{2}$). If there were more than two electrons in an orbital, then it's guaranteed that there will duplicates, violating the PEP (see the [pidgeonhole principle](https://en.wikipedia.org/wiki/Pigeonhole_principle)).
+
+{{<hint warning>}}
+Some of you may be disappointed with this explanation, since I don't really explain *why* there are only two spin values. Frankly, I do not know, nor do I think it's something that we're gonna be expected to know. Though if you can find a reasonably understandable explanation and send it to me, then I'm happy to add it here.
 {{</hint>}}
+{{</details>}}
+{{</details>}}
 
-### You lost me at $1s$
+Each orbital has its own distinct shape. A $s$ orbitals are ball-like, while $p$ orbitals are dumbbell-shaped.
 
-Okay, I may have went ahead a little bit. I can't just throw terms like $1s$, 'energy shells,' and 'principle quantum number' around without explaining what they mean. Electrons are like snowflakes in the sense that no two electrons are alike. Unlike snowflakes, however, where it's technically possible yet virtually impossible to have two of the same snowflakes, electrons in an atom are *fundamentally* unique, as discovered by Wolfgang Pauli. 
+{{<expand "Figure of orbital shapes">}}
+{{<figure src="https://energywavetheory.com/wp-content/uploads/2018/05/K5EcA.jpg" caption="https://energywavetheory.com/wp-content/uploads/2018/05/K5EcA.jpg">}}
+{{</expand>}}
 
-{{<hint info>}}The **Pauli Exclusion Principle** states that no two electrons *in the same atom* can have the same four quantum numbers.{{</hint>}}
+### Electron Configuration
 
-These four quantum numbers are as follows: the principle quantum number ($n$), the azimuthal(wtf?) quantum number ($\ell$), the magnetic quantum number ($m_\ell$), and the spin quantum number ($m_s$). 
+To represent the amount of electrons in an atom, chemists use electron configurations. We start from a $n$ of 1 and an $\ell$ of 0 ($s$), meaning that hydrogen's neutral electron configuration is represented as $1s^1$. 
 
-{{<hint info>}}
-| Quantum Number      | Physical Representation                   | Possible Values              |
-| ---                 | ---                                       | ---                          |
-| Principle ($n$)     | energy shell                              | $1 \rightarrow \infty$       |
-| Azimuthal ($\ell$)  | shape/orbital                             | $0 (s), 1 (p), 2 (d), ... n$ |
-| Magnetic ($m_\ell$) | orientation                               | $-\ell, ... 0, ... \ell$     |
-| Spin ($m_s$)        | spin                                      | $-\frac{1}{2}, \frac{1}{2}$  |
-{{</hint>}} 
+{{<hint info>}}The superscripts represent the number of electrons in an orbital. If you add all of them up, you get the number of electrons in the entire atom/ion.{{</hint>}}
 
+{{<details "What order do electrons fill orbitals?">}}
+They adhere to the **aufbau principle**, meaning they fill the orbitals with the lowest orbital energy.
+
+{{<figure src="https://image.shutterstock.com/image-illustration/chart-electron-configuration-each-energy-260nw-1552589996.jpg" caption="A helpful chart showing the optimal orbital energy path.(https://www.shutterstock.com/image-illustration/chart-electron-configuration-each-energy-level-1552589996)">}}
+
+{{<hint danger>}}
+This diagram is not without its faults. It is generally accurate for the ground states of lower energy atoms, however many exceptions exist with atoms and ions of higher energy.
+{{</hint>}}
+{{</details>}}
+
+{{<details "What is the electron configuration of $\ce{_{6}C}$?">}}
+$1s^22s^22p^2$
+{{</details>}}
+
+For longer electron configurations, you can use a shorthand by replacing part of the configuration with the symbol of the noble gas in the previous period. For example, $\ce{_{16}S}$ can be represented as $[\ce{Ne}]3s^23p^4$
+
+{{<details "What is the electron configuration of $\ce{_{87}Fr}$?">}}
+Long form: $1s^22s^22p^63s^23p^64s^23d^{10}4p^65s^24d^{10}5p^66s^24f^{14}5d^{10}6p^67s^1$
+
+Shorthand: $[\ce{Rn}] 7s^1$
+
+{{<hint info>}}The in shorthand form, the $n$ of the $s$ orbital is equal to the period number.{{</hint>}}
+
+{{</details>}}
 

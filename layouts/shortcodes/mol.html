@@ -1,0 +1,11 @@
+<div style='height: 400px; width: 400px; position: relative;' class='viewer_3Dmoljs' 
+	data-backgroundcolor='0xffffff'
+	data-ui='true'
+	{{ if .IsNamedParams }}
+		data-cid='{{ .Get "cid" }}'
+		data-style='{{ with .Get "style" }}{{ . }}{{ else }}stick{{ end }}'
+	{{ else }}
+		data-cid='{{ .Get 0 }}'
+		data-style='{{ with .Get 1 }}{{ . }}{{ else }}stick{{ end }}'
+	{{ end }}
+></div>

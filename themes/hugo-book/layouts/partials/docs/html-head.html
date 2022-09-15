@@ -51,6 +51,9 @@ https://github.com/alex-shpak/hugo-book
 <!--FOR KATEX SUPPORT-->
 {{ if .Params.katex }}{{ partial "helpers/katex.html" . }}{{ end }}
 
+<!--FOR 3Dmol SUPPORT-->
+{{ if .Params.mol }}{{ partial "helpers/3Dmol.html" . }}{{ end }}
+
 {{- define "integrity" -}}
   {{- if (urls.Parse .Permalink).Host -}}
     integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
